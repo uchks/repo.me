@@ -1,0 +1,54 @@
+{
+   "tintColor":"#010101",
+   "class":"DepictionStackView",
+   "views":[
+      {
+         "markdown":"If you need help with \"Oof Safe Mode Icon\", you can contact Shuga, the developer, via e-mail.",
+         "class":"DepictionMarkdownView"
+      },
+      {
+         "tintColor":"#010101",
+         "openExternal":"true",
+         "action":"mailto:sileo@shuga.co",
+         "class":"DepictionTableButtonView",
+         "title":"Email Developer"
+      },
+      {
+         "markdown":"If you found a mistake in the depiction or cannot download the package, you can reach outto the maintainer of the \"Shuga's Repo\" repo, Shuga.",
+         "class":"DepictionMarkdownView"
+      },
+      {
+         "tintColor":"#010101",
+         "openExternal":"true",
+         "action":"mailto:sileo@shuga.co",
+         "class":"DepictionTableButtonView",
+         "title":"Email Maintainer"
+      },
+      {
+         "markdown":"You can also contact the repo maintainer via the following sites:",
+         "class":"DepictionMarkdownView"
+      },
+      {
+         "tintColor":"#010101",
+         "openExternal":"true",
+         "action":"https://twitter.com/HeyItsShuga",
+         "class":"DepictionTableButtonView",
+         "title":"Twitter"
+      },
+      {
+         "tintColor":"#010101",
+         "openExternal":"true",
+         "action":"https://reddit.com/u/HeyItsShuga",
+         "class":"DepictionTableButtonView",
+         "title":"Reddit"
+      },
+      {
+         "tintColor":"#010101",
+         "openExternal":"true",
+         "action":"https://shuga.co/",
+         "class":"DepictionTableButtonView",
+         "title":"Website"
+      }
+   ],
+   "title":"Contact Support"
+}
