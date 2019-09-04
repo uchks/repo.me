@@ -1,5 +1,8 @@
-# Sidia (Based On Reposi3)
-A Sileo / Cydia repository template. This template contains samples on how you can easily make depiction pages without replicating your html pages. The pages are styled using [Bootsrap](http://getbootstrap.com/) which is really easy to use (for Cydia), and the Sileo pages are styled using JavaScript Object Notation.
+<center>
+  <h1 align="center">Sidia (Based On Reposi3)</h1>
+  <h4 align="center">A Sileo / Cydia repository template. This template contains samples on how you can easily make depiction pages without replicating your html pages. The pages are styled using [Bootsrap](http://getbootstrap.com/) which is really easy to use (for Cydia), and the Sileo pages are styled using JavaScript Object Notation.</h4>
+  <h4 align="center">If you use web depictions / Reposi3, Sileo now converts web depictions to native depictions in realtime. It's because of this, I will stop iOS maintenance / support for Sidia. tvOS and macOS support remain.</h4>
+</center>
 
 This guide does NOT cover creating .deb files but will briefly cover assiging depictions.
 
