@@ -144,7 +144,7 @@ _Windows users, see [dpkg-scanpackages-py](https://github.com/supermamon/dpkg-sc
 #### Cydia / Sileo at last!
 
 If you haven't done yet, go ahead and add your repo to Cydia / Sileo.
-You should now be able to install your tweak into your own repo.
+You should now be able to install your tweak from your own repo.
 
 ### Cleanup
 
