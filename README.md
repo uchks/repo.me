@@ -1,7 +1,7 @@
 <center>
-  <h1 align="center">Sidia (Based On Reposi3)</h1>
+  <h1 align="center">repo.me</h1>
   <h4 align="center">A Sileo / Cydia repository template. This template contains samples on how you can easily make depiction pages without replicating your html pages. The pages are styled using <a href"https://getbootstrap.com">Bootstrap</a> which is really easy to use (for Cydia), and the Sileo pages are styled using JavaScript Object Notation.</h4>
-  <h4 align="center">If you use web depictions / Reposi3, Sileo now converts web depictions to native depictions in realtime. It's because of this, I will stop iOS maintenance / support for Sidia. tvOS and macOS support remain.</h4>
+  <h4 align="center">If you use web depictions / Reposi3, Sileo now converts web depictions to native depictions in realtime. It's because of this, I will stop iOS maintenance / support for repo.me. tvOS and macOS support remain.</h4>
 </center>
 
 This guide does NOT cover creating .deb files but will briefly cover assiging depictions.
@@ -10,25 +10,25 @@ This guide does NOT cover creating .deb files but will briefly cover assiging de
 #### Note: With the release of Silica from [Shuga](https://github.com/ShugaBuga/), I highly recommend using that over this, however, do as you wish.
 
 ## How to use this template
-If you are *not* hosting your repo on [Github Pages](https://pages.github.com/), you can download the zip file [here](https://github.com/sukarodo/Sidia/archive/master.zip) and extract to a subfolder on your website.
+If you are *not* hosting your repo on [Github Pages](https://pages.github.com/), you can download the zip file [here](https://github.com/sukarodo/repo.me/archive/master.zip) and extract to a subfolder on your website.
 
 **Release File**
 
 Edit `Release` file. Modify the items pointed by `<--`
 
-    Origin: Sidia  <--
-    Label: Sidia   <--
+    Origin: repo.me  <--
+    Label: repo.me   <--
     Suite: stable
     Version: 1.0
     Codename: ios
     Architectures: iphoneos-arm
     Components: main
-    Description: Sidia - a modern cydia / sileo apt repository template  <--
+    Description: repo.me - a modern & legacy apt repository template  <--
 
 **Branding**
 
 Open `index.html`
-Change <title>Sidia</title> to whatever you wish.
+Change <title>repo.me</title> to whatever you wish.
 Change lines 54 - 63 to whatever you wish.
 Change line 71 into your own URL.
 Note: YOU DO NOT NEED THIS. YOU CAN ALSO MAKE YOUR OWN. DO WHAT YOU WISH.
@@ -158,7 +158,7 @@ These are some extra things that can make your repository look even better on Si
 
 Change The Following Lines:
 ```
- "url": "https://raw.githubusercontent.com/sukarodo/Sidia/master/assets/Banners/RepoHeader.png", <---- The Package Banner
+ "url": "https://raw.githubusercontent.com/sukarodo/repo.me/master/assets/Banners/RepoHeader.png", <---- The Package Banner
         "title": "Sample Package", <---- Your Package Name
         "package": "com.sukarodo.newpackage", <---- The Actual Package
 ```
