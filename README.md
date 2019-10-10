@@ -1,7 +1,7 @@
 <center>
   <h1 align="center">repo.me</h1>
   <h4 align="center">A Sileo / Cydia repository template. This template contains samples on how you can easily make depiction pages without replicating your html pages. The pages are styled using <a href"https://getbootstrap.com">Bootstrap</a> which is really easy to use (for Cydia), and the Sileo pages are styled using JavaScript Object Notation.</h4>
-  <h4 align="center">If you use web depictions / Reposi3, Sileo now converts web depictions to native depictions in realtime. It's because of this, I will stop iOS maintenance / support for repo.me. tvOS and macOS support remain.</h4>
+  <h4 align="center">If you use web depictions / Reposi3, Sileo now converts web depictions to native depictions in realtime.</h4>
 </center>
 
 This guide does NOT cover creating .deb files but will briefly cover assiging depictions.
