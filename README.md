@@ -1,13 +1,13 @@
 <center>
   <h1 align="center">repo.me</h1>
-  <h4 align="center">A modern package manager repository template. This template contains samples on how you can easily make depiction pages without replicating your html pages. The pages are styled using <a href"https://getbootstrap.com">Bootstrap</a> which is really easy to use (for Cydia), and the Sileo pages are styled using JavaScript Object Notation.</h4>
+  <h4 align="center">A (now-archived) modern package manager repository template. This template contains samples on how you can easily make depiction pages without replicating your html pages. The pages are styled using <a href"https://getbootstrap.com">Bootstrap</a> which is really easy to use (for Cydia), and the Sileo pages are styled using JavaScript Object Notation.</h4>
   <h4 align="center">If you use web depictions / Reposi3, Sileo now converts web depictions to native depictions in realtime.</h4>
 </center>
 
 This guide does NOT cover creating .deb files but will briefly cover assiging depictions.
 
 #### CREDITS TO: [Supermamon](https://github.com/Supermamon/), [Essentialis Repo](https://twitter.com/EssentialisRepo/), [Saurik](https://twitter.com/Saurik/), [Sileo Team](https://twitter.com/getSileo/), and the [AppTapp Team](https://twitter.com/AppTappTeam/).
-#### Note: With the release of Silica from [Shuga](https://github.com/ShugaBuga/), I highly recommend using that over this for Sileo, however, do as you wish.
+#### Note: With the release of Silica from [Shuga](https://github.com/ShugaBuga/), I highly recommend using that over this, as it currently has Windows WSL support, and I'm working on a semi-solution for Windows Support as a whole.
 
 ## How to use this template
 If you are *not* hosting your repo on [Github Pages](https://pages.github.com/), you can download the zip file [here](https://github.com/sukarodo/repo.me/archive/master.zip) and extract to a subfolder on your website.
