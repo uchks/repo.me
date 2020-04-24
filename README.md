@@ -6,7 +6,7 @@
 
 This guide does NOT cover creating .deb files but will briefly cover assiging depictions.
 
-#### CREDITS TO: [Supermamon](https://github.com/Supermamon/), [Essentialis Repo](https://twitter.com/EssentialisRepo/), [Saurik](https://twitter.com/Saurik/), [Sileo Team](https://twitter.com/getSileo/), and the [AppTapp Team](https://twitter.com/AppTappTeam/).
+#### CREDITS TO: [Supermamon](https://github.com/Supermamon/), [Saurik](https://twitter.com/Saurik/), [Sileo Team](https://twitter.com/getSileo/), and the [AppTapp Team](https://twitter.com/AppTappTeam/).
 #### Note: With the release of Silica from [Shuga](https://github.com/ShugaBuga/), I highly recommend using that over this, as it currently has Windows WSL support, and I'm working on a semi-solution for Windows Support as a whole.
 
 ## How to use this template
@@ -14,16 +14,10 @@ If you are *not* hosting your repo on [Github Pages](https://pages.github.com/),
 
 **Release File**
 
-Edit `Release` file. Modify the items pointed by `<--`
+Modify `repo.conf` in ./assets/repo by changing the labels:
+`ORIGIN_HERE`, `LABEL_HERE`, `CODENAME_HERE`, and `DESCRIPTION_HERE`
 
-    Origin: repo.me  <--
-    Label: repo.me   <--
-    Suite: stable
-    Version: 1.0
-    Codename: ios
-    Architectures: iphoneos-arm
-    Components: main
-    Description: repo.me - a modern & legacy apt repository template  <--
+`updaterepo.sh` will take care of the Release file after modifying the config. 
 
 **Branding**
 
