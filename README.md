@@ -7,7 +7,7 @@
 This guide does NOT cover creating .deb files but will briefly cover assiging depictions.
 
 #### CREDITS TO: [Supermamon](https://github.com/Supermamon/), [Saurik](https://twitter.com/Saurik/), [Sileo Team](https://twitter.com/getSileo/), and the [AppTapp Team](https://twitter.com/AppTappTeam/).
-#### Note: With the release of Silica from [Shuga](https://github.com/ShugaBuga/), I highly recommend using that over this, as it currently has Windows WSL support, and I'm working on a semi-solution for Windows Support as a whole.
+#### Note: With the release of Silica from [Shuga](https://github.com/ShugaBuga/), I highly recommend using that over this, as it currently has Windows WSL support, and I'm working on a semi-solution for Windows Support as a whole. Shuga has contacted me regarding "adding WSL support" and in a sense, I technically do need to rewrite for the transition to apt-ftparchive, but this is barely worked on by me. I have other things to worry about other than maintaining projects I don't want to mess with too much. 
 
 ## How to use this template
 If you are *not* hosting your repo on [Github Pages](https://pages.github.com/), you can download the zip file [here](https://github.com/sukarodo/repo.me/archive/master.zip) and extract to a subfolder on your website.
