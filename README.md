@@ -10,9 +10,6 @@ The Cydia pages are styled using [Bootstrap](https://getbootstrap.com), and the 
 If you use web depictions / Reposi3, Sileo now converts web depictions to native depictions in **realtime**.
 
 This guide does **NOT** cover creating .deb files, *but will briefly cover assiging depictions*, please do not ask about debian files, that is for development. This is simply here to get you started on making a base apt repository.
-
-#### Note: With the release of Silica from [Shuga](https://github.com/ShugaBuga/), I highly recommend using that over this, as it currently has Windows WSL support, and I'm working on a semi-solution (yet hacky solution) for Windows Support as a whole. This is a rewrite for apt-ftparchive that will be merged to the main branch when I feel as such. Until then, if you wish for automation, I still recommend Silica. The `update-repo.sh` file contained is cross-platform, meaning it should work on WSL, Linux, and macOS.
-
 <a href="#"><img src="https://i.imgur.com/y4oV9VV.png" alt="colored line"></a>
 
 ### Steps
