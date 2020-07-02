@@ -20,6 +20,7 @@ elif [[ "$(uname)" == Darwin ]]; then # macOS usage of repo.me
 
 	clear
 
+	echo "apt-ftparchive compiled by @Diatrus" # credits to Hayden!
 	wget -q -nc https://apt.procurs.us/apt-ftparchive # assuming Homebrew is already installed, download apt-ftparchive via wget
 	sudo chmod 751 ./apt-ftparchive # could change this to be pointed in documentation, but people don't like to read what needs READING. i'll think about it later.
 	

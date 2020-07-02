@@ -175,5 +175,5 @@ Change The Following Lines:
         "title": "Sample Package", <---- Your Package Name
         "package": "me.syns.newpackage", <---- The Actual Package
 ```
-  <p align="center">Special Thanks and Credits to: <a href="https://github.com/Supermamon/">Supermamon</a> for <a href="https://github.com/supermamon/Reposi3">Reposi3</a> (the base), <a href="https://twitter.com/Saurik/">Saurik</a>, & the <a href="https://twitter.com/getSileo/">Sileo Team</a>.</p>
+  <p align="center">Special Thanks and Credits to: <a href="https://github.com/Supermamon/">Supermamon</a> for <a href="https://github.com/supermamon/Reposi3">Reposi3</a> (the base), <a href="https://twitter.com/Saurik/">Saurik</a>, the <a href="https://twitter.com/getSileo/">Sileo Team</a>, & <a href="https://twitter.com/Diatrus/">Diatrus</a> for apt-ftparchive on macOS.</p>
 </center>
