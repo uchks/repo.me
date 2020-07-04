@@ -1,5 +1,5 @@
 <center>
-  <a href="#"><img src="https://i.imgur.com/coocM3M.png" alt="Logo"></a>
+  <a href="#"><img src="https://i.imgur.com/gKt64bk.png" alt="Logo"></a>
   <h4 align="center">a modern iOS apt repository template</h4>
 </center>
 
