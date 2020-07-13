@@ -17,7 +17,12 @@ if [[ "$ostype" == "linux"* ]]; then # Linux usage of repo.me
 	echo "Repository Updated, thanks for using repo.me!"
 elif [[ "$(uname)" == Darwin ]]; then # macOS usage of repo.me
 	cd "$(dirname "$0")" || exit
-
+	clear
+	echo "Checking for Homebrew & wget..."
+	if test ! "$(which brew)"; then
+                /bin/bash -c -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+        fi
+	brew list --verbose wget || brew install wget
 	clear
 
 	echo "apt-ftparchive compiled by @Diatrus" # credits to Hayden!
