@@ -20,7 +20,7 @@ elif [[ "$(uname)" == Darwin ]]; then # macOS usage of repo.me
 	clear
 	echo "Checking for Homebrew & wget..."
 	if test ! "$(which brew)"; then
-                /bin/bash -c -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+                /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
         fi
 	brew list --verbose wget || brew install wget
 	clear
