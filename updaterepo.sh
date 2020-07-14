@@ -2,7 +2,7 @@
 if [[ "$OSTYPE" == "linux"* ]]; then # Linux usage of repo.me
 	cd "$(dirname "$0")" || exit
 
-	rm Packages Packages.xz Packages.gz Packages.bz2 Packages.zst Release
+	rm Packages Packages.xz Packages.gz Packages.bz2 Packages.zst Release 2> /dev/null
 
 	apt-ftparchive packages ./debians > Packages
 	gzip -c9 Packages > Packages.gz
