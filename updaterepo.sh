@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
-if [[ "$ostype" == "linux"* ]]; then # Linux usage of repo.me
+if [[ "$OSTYPE" == "linux"* ]]; then # Linux usage of repo.me
 	cd "$(dirname "$0")" || exit
-
-	clear
 
 	rm Packages Packages.xz Packages.gz Packages.bz2 Packages.zst Release
 
@@ -17,7 +15,7 @@ if [[ "$ostype" == "linux"* ]]; then # Linux usage of repo.me
 	echo "Repository Updated, thanks for using repo.me!"
 elif [[ "$(uname)" == Darwin ]]; then # macOS usage of repo.me
 	cd "$(dirname "$0")" || exit
-	clear
+
 	echo "Checking for Homebrew, wget, xz, & zstd..."
 	if test ! "$(which brew)"; then
                 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
@@ -44,8 +42,6 @@ elif [[ "$(uname)" == Darwin ]]; then # macOS usage of repo.me
 	echo "Repository Updated, thanks for using repo.me!"
 elif [[ "$(uname -r)" == *Microsoft ]]; then # WSL usage of repo.me
 	cd "$(dirname "$0")" || exit
-
-	clear
 
 	rm Packages Packages.xz Packages.gz Packages.bz2 Packages.zst Release
 
