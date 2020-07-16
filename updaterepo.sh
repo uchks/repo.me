@@ -42,7 +42,23 @@ elif [[ "$(uname)" == Darwin ]]; then # macOS usage of repo.me
 	./apt-ftparchive release -c ./assets/repo/repo.conf . > Release
 
 	echo "Repository Updated, thanks for using repo.me!"
-elif [[ "$(uname -r)" == *Microsoft ]]; then # WSL usage of repo.me
+elif [[ "$(uname -r)" == *Microsoft ]]; then # WSL 1 usage of repo.me
+	cd "$(dirname "$0")" || exit
+
+	clear
+
+	rm Packages Packages.xz Packages.gz Packages.bz2 Packages.zst Release
+
+	apt-ftparchive packages ./debians > Packages
+	gzip -c9 Packages > Packages.gz
+	xz -c9 Packages > Packages.xz
+	zstd -c19 Packages > Packages.zst
+	bzip2 -c9 Packages > Packages.bz2
+
+	apt-ftparchive release -c ./assets/repo/repo.conf . > Release
+
+	echo "Repository Updated, thanks for using repo.me!"
+elif [[ "$(uname -r)" == *microsoft-standard ]]; then # WSL 2 usage of repo.me
 	cd "$(dirname "$0")" || exit
 
 	clear
