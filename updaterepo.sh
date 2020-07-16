@@ -1,10 +1,8 @@
 #!/usr/bin/env bash
-if [[ "$ostype" == "linux"* ]]; then # Linux usage of repo.me
+if [[ "$OSTYPE" == "linux"* ]]; then # Linux usage of repo.me
 	cd "$(dirname "$0")" || exit
 
-	clear
-
-	rm Packages Packages.xz Packages.gz Packages.bz2 Packages.zst Release
+	rm Packages Packages.xz Packages.gz Packages.bz2 Packages.zst Release 2> /dev/null
 
 	apt-ftparchive packages ./debians > Packages
 	gzip -c9 Packages > Packages.gz
@@ -17,7 +15,7 @@ if [[ "$ostype" == "linux"* ]]; then # Linux usage of repo.me
 	echo "Repository Updated, thanks for using repo.me!"
 elif [[ "$(uname)" == Darwin ]]; then # macOS usage of repo.me
 	cd "$(dirname "$0")" || exit
-	clear
+
 	echo "Checking for Homebrew, wget, xz, & zstd..."
 	if test ! "$(which brew)"; then
                 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
@@ -31,7 +29,7 @@ elif [[ "$(uname)" == Darwin ]]; then # macOS usage of repo.me
 	wget -q -nc https://apt.procurs.us/apt-ftparchive # assuming Homebrew is already installed, download apt-ftparchive via wget
 	sudo chmod 751 ./apt-ftparchive # could change this to be pointed in documentation, but people don't like to read what needs READING. i'll think about it later.
 	
-	rm {Packages{,.xz,.gz,.bz2,.zst},Release{,.gpg}}
+	rm {Packages{,.xz,.gz,.bz2,.zst},Release{,.gpg}} 2> /dev/null
 
 	./apt-ftparchive packages ./debians > Packages
 	gzip -c9 Packages > Packages.gz
@@ -61,9 +59,7 @@ elif [[ "$(uname -r)" == *Microsoft ]]; then # WSL 1 usage of repo.me
 elif [[ "$(uname -r)" == *microsoft-standard ]]; then # WSL 2 usage of repo.me
 	cd "$(dirname "$0")" || exit
 
-	clear
-
-	rm Packages Packages.xz Packages.gz Packages.bz2 Packages.zst Release
+	rm Packages Packages.xz Packages.gz Packages.bz2 Packages.zst Release 2> /dev/null
 
 	apt-ftparchive packages ./debians > Packages
 	gzip -c9 Packages > Packages.gz
