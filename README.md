@@ -166,9 +166,9 @@ checking for apt-ftparchive, and macOS (10.10+) users should be using Diatrus' [
 
 ### 4. (optional) adding gpg key and generating a release.gpg file
 
-Your going to need gnupg. then open a terminal and type gpg --gen-key if it asks you what kind of key you want select 4 rsa sign only and let it do its thing. REMEMBER YOUR PASSWORD FOR IT. Then make sure your in the directory of your repo and type sudo gpg --output keyFile --armor --export Last8Letersofyourkeyfingerprint.
+Your going to need gnupg. then open a terminal and type gpg --gen-key if it asks you what kind of key you want select 4 rsa sign only and 4096 instead of 3072 and let it do its thing. REMEMBER YOUR PASSWORD FOR IT. Then make sure your in the directory of your repo and type sudo gpg --output keyFile --armor --export Last8Letersofyourkeyfingerprint.
 If you cant find you key fingerprint type gpg --list-keys and copy and paste the last 8 letters of the text under pub.
-Now type gpg -abs -o Release.gpg Release and enter your password from gpg key from earlier. now run update-repo.sh and you should be good to go. now in order for users to add the key they must go into a terminal and type  wget -O - https://yourreponame.com/keyfile | sudo apt-key add - then apt-get update and your good to go
+now run update-repo.sh and then run gpg -abs -o Release.gpg Release and enter your password from gpg key from earlier and then you should be good to go. now in order for users to add the key they must go into a terminal and type  wget -O - https://yourreponame.com/keyfile | sudo apt-key add - then apt-get update and your good to go
 
 #### 5. Repository at last!
 
