@@ -22,7 +22,7 @@ Found something that can be improved? Found a mistake? Please do make a pull req
 You **must** have apt-ftparchive on your operating system to utilize repo.me. This can be solved on Windows via WSL. My subsystem OS is Debian, which I know does contain apt-ftparchive. This can be solved on macOS via Diatrus' precompiled version (downloaded automatically via `updaterepo.sh`, and perms will be set automatically as well). For iOS / iPadOS, you'll need `apt-utils` on the Procursus repository (Elucubratus support is unknown as of now).</br>
 
 You **must** have `wget, zstd, xz, bzip2, & gzip` installed on macOS. Don't worry, the script will automatically check for homebrew installation and dependencies, if not found,
-installation for all of the dependencies and homebrew will starts.</br>
+installation for all of the dependencies and homebrew will start.</br>
 
 ### 2. Download / Fork repo.me
 
