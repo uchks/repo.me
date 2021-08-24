@@ -13,7 +13,7 @@ if [[ "$OSTYPE" == "linux"* ]]; then # Linux usage of repo.me
     apt-ftparchive release -c ./assets/repo/repo.conf . > Release
     
     echo "Repository Updated, thanks for using repo.me!"
-    elif [[ "$(uname)" == Darwin ]] && [[ "$(uname -p)" == i386 ]]; then # macOS usage of repo.me
+elif [[ "$(uname)" == Darwin ]] && [[ "$(uname -p)" == i386 ]]; then # macOS usage of repo.me
     cd "$(dirname "$0")" || exit
     
     echo "Checking for Homebrew, wget, xz, & zstd..."
@@ -40,7 +40,7 @@ if [[ "$OSTYPE" == "linux"* ]]; then # Linux usage of repo.me
     ./apt-ftparchive release -c ./assets/repo/repo.conf . > Release
     
     echo "Repository Updated, thanks for using repo.me!"
-    elif [[ "$(uname -r)" == *Microsoft ]]; then # WSL 1 usage of repo.me
+elif [[ "$(uname -r)" == *Microsoft ]]; then # WSL 1 usage of repo.me
     cd "$(dirname "$0")" || exit
     
     rm Packages Packages.xz Packages.gz Packages.bz2 Packages.zst Release 2> /dev/null
@@ -54,7 +54,7 @@ if [[ "$OSTYPE" == "linux"* ]]; then # Linux usage of repo.me
     apt-ftparchive release -c ./assets/repo/repo.conf . > Release
     
     echo "Repository Updated, thanks for using repo.me!"
-    elif [[ "$(uname -r)" == *microsoft-standard ]]; then # WSL 2 usage of repo.me
+elif [[ "$(uname -r)" == *microsoft-standard ]]; then # WSL 2 usage of repo.me
     cd "$(dirname "$0")" || exit
     
     rm Packages Packages.xz Packages.gz Packages.bz2 Packages.zst Release 2> /dev/null
@@ -68,7 +68,7 @@ if [[ "$OSTYPE" == "linux"* ]]; then # Linux usage of repo.me
     apt-ftparchive release -c ./assets/repo/repo.conf . > Release
     
     echo "Repository Updated, thanks for using repo.me!"
-    elif [[ "$(uname)" == Darwin ]] && [[ "$(uname -p)" != i386 ]]; then # iOS/iPadOS usage of repo.me
+elif [[ "$(uname)" == Darwin ]] && [[ "$(uname -p)" != i386 ]]; then # iOS/iPadOS usage of repo.me
     cd "$(dirname "$0")" || exit
     echo "Checking for apt-ftparchive..."
     if test ! "$(apt-ftparchive)"; then
