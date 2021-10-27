@@ -2,7 +2,7 @@ name: Update-Repo
 on: [push]
 jobs:
 Update-Repo-job:
-runs-on: macos-11
+runs-on: ubuntu-lastest
 steps:
 - run: echo "${{ github.event_name }}."
 - run: echo "${{ runner.os }}."
