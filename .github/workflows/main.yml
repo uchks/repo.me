@@ -1,23 +1,23 @@
-name: Update-Repo
+name: Update-MyRepo
 on: [push]
 jobs:
-Update-Repo-job:
-runs-on: ubuntu-lastest
-steps:
-- run: echo "${{ github.event_name }}."
-- run: echo "${{ runner.os }}."
-- run: echo "${{ github.ref }} ${{ github.repository }}."
-- name: Check out repository code
-uses: actions/checkout@v2
-- run: echo "${{ github.repository }}."
-- run: echo "Runner Ready."
-- name: List files in the repository
-run: |
-ls ${{ github.workspace }}
-- run: chmod u+x ./updaterepo.sh
-- run: ./updaterepo.sh
-- run: git config --global user.email "example@mail.com"
-- run: git config --global user.name "Example"
-- run: git commit -a -m "Auto Update"
-- run: git push
-- run: echo "${{ job.status }}."
+  Update-Repo-job:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "${{ github.event_name }}."
+      - run: echo "${{ runner.os }}."
+      - run: echo "${{ github.ref }} ${{ github.repository }}."
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      - run: echo "${{ github.repository }}."
+      - run: echo "Runner Hazır."
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
+      - run: chmod u+x ./updaterepo.sh
+      - run: ./updaterepo.sh
+      - run: git config --global user.email "turannul@gmail.com"
+      - run: git config --global user.name "Turan-Github Actions"
+      - run: git commit -a -m "Otomatik Güncelleme"
+      - run: git push
+      - run: echo "${{ job.status }}."
