@@ -16,8 +16,8 @@ jobs:
           ls ${{ github.workspace }}
       - run: chmod u+x ./updaterepo.sh
       - run: ./updaterepo.sh
-      - run: git config --global user.email "turannul@gmail.com"
-      - run: git config --global user.name "Turan-Github Actions"
-      - run: git commit -a -m "Otomatik Güncelleme"
+      - run: git config --global user.email "Anexample@gmail.com"
+      - run: git config --global user.name "Github-Actions"
+      - run: git commit -a -m "Auto Update"
       - run: git push
       - run: echo "${{ job.status }}."
