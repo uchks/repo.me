@@ -2,10 +2,15 @@ name: Update-Repo
 on: [push]
 jobs:
 Update-Repo-job:
-runs-on: ubuntu-latest
+runs-on: macos-latest
 steps:
+- run: echo "${{ github.event_name }}."
+- run: echo "${{ runner.os }}."
+- run: echo "${{ github.ref }} ${{ github.repository }}."
 - name: Check out repository code
 uses: actions/checkout@v2
+- run: echo "${{ github.repository }}."
+- run: echo "Runner Ready."
 - name: List files in the repository
 run: |
 ls ${{ github.workspace }}
