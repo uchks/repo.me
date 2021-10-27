@@ -12,7 +12,8 @@ jobs:
       - run: echo "${{ github.repository }}."
       - run: echo "Runner Hazır."
       - name: List files in the repository
-      - run: ls ${{ github.workspace }}
+      - run: |
+         ls ${{ github.workspace }}
       - run: chmod u+x ./updaterepo.sh
       - run: ./updaterepo.sh
       - run: git config --global user.email "Anexample@gmail.com"
