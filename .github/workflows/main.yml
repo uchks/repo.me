@@ -1,0 +1,18 @@
+name: Update-Repo
+on: [push]
+jobs:
+Update-Repo-job:
+runs-on: ubuntu-latest
+steps:
+- name: Check out repository code
+uses: actions/checkout@v2
+- name: List files in the repository
+run: |
+ls ${{ github.workspace }}
+- run: chmod u+x ./updaterepo.sh
+- run: ./updaterepo.sh
+- run: git config --global user.email "example@mail.com"
+- run: git config --global user.name "Example"
+- run: git commit -a -m "Auto Update"
+- run: git push
+- run: echo "${{ job.status }}."
