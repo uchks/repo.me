@@ -18,7 +18,7 @@ jobs:
       - run: ./updaterepo.sh
       - run: git config --global user.email "Anexample@mail.com"
       - run: git config --global user.name "Github-Actions"
-      - run: git commit -a -m "Auto Update"
       - run: git add "${{ github.workspace }}"
+      - run: git commit -a -m "Auto Update"
       - run: git push
       - run: echo "${{ job.status }}."
