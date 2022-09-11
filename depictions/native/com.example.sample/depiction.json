@@ -1,6 +1,6 @@
 {
 	"minVersion": "0.1",
-	"headerImage": "https://raw.githubusercontent.com/syns/repo.me/master/assets/Banners/RepoHeader.png",
+	"headerImage": "https://raw.githubusercontent.com/uchks/repo.me/master/assets/Banners/RepoHeader.png",
 	"tintColor": "#ffae8e",
 	"tabs": [
 		{
@@ -44,7 +44,7 @@
 				},
 				{
 					"title": "Use This Template",
-					"action": "https://github.com/syns/repo.me",
+					"action": "https://github.com/uchks/repo.me",
 					"class": "DepictionTableButtonView"
 				},
 				{

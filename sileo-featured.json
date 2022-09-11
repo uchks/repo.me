@@ -4,9 +4,9 @@
   "itemCornerRadius": 10,
   "banners": [
     {
-        "url": "https://raw.githubusercontent.com/syns/repo.me/master/assets/Banners/RepoHeader.png",
+        "url": "https://raw.githubusercontent.com/uchks/repo.me/master/assets/Banners/RepoHeader.png",
         "title": "Sample Package",
-        "package": "me.syns.samplepackage",
+        "package": "com.example.sample",
         "hideShadow": false
     }
   ]

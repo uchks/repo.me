@@ -1,5 +1,5 @@
 <package>
-	<id>com.sukarodo.samplepackage</id>
+	<id>com.example.sample</id>
 	<name>Sample Package</name>
 	<version>1.0</version>
 	<compatibility>
