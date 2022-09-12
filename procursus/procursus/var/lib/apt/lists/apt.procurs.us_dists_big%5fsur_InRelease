@@ -1,0 +1,176 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+Architectures: darwin-arm64 darwin-arm64e darwin-amd64
+Codename: big_sur
+Components: main testing
+Date: Sat, 27 Aug 2022 21:41:18 +0000
+Description: Distribution of tools for macOS Big Sur
+Label: Procursus
+Origin: Procursus
+Suite: big_sur
+Version: 1.0
+MD5Sum:
+ 019da53398cab522e20090f5c391d818              252 Release
+ d26417c0e834827deffff9a2216a236f         13096094 main/Contents-darwin-amd64
+ 54baec3647c9d12a9c934bccc5fc4624           741576 main/Contents-darwin-amd64.xz
+ 9256a750e198ec57cbb132c968218b9c           709768 main/Contents-darwin-amd64.zst
+ d26417c0e834827deffff9a2216a236f         13096094 main/Contents-darwin-arm64
+ 54baec3647c9d12a9c934bccc5fc4624           741576 main/Contents-darwin-arm64.xz
+ 9256a750e198ec57cbb132c968218b9c           709768 main/Contents-darwin-arm64.zst
+ 974532eb19c6ef7335a518328d693d4d         11898845 main/Contents-darwin-arm64e
+ 3a153e649a73a2259405b48fd625b946           673504 main/Contents-darwin-arm64e.xz
+ 4a44b6203bb62104fcdfc34ee3493755           642773 main/Contents-darwin-arm64e.zst
+ 803d8daea932d5cb9a17fe9827443f4a          1702025 main/binary-darwin-amd64/Packages
+ 75cb897f603c0e627a77686c7a01bdad           380700 main/binary-darwin-amd64/Packages.xz
+ e43e1001c9cced6157e4ab6c350d5bea           390654 main/binary-darwin-amd64/Packages.zst
+ 1504c10084c289d3cccd2462a75b0c8a             1659 main/binary-darwin-amd64/Release
+ 63bef9e48ff238d14fa757fb9f6a4479          1715804 main/binary-darwin-arm64/Packages
+ 5dc4ec5429cb5fe777edaba24132ce10           383936 main/binary-darwin-arm64/Packages.xz
+ 9f220cc21761b4dd913ef3f01deff36b           394647 main/binary-darwin-arm64/Packages.zst
+ ed1ce6c854554872460d4db3ca70f5e5             1659 main/binary-darwin-arm64/Release
+ d88fd89d7b846b5d97adca7b1c1cf08f           186125 main/binary-darwin-arm64e/Packages
+ d8584c1a3a32afc9802ec423876dce96            33636 main/binary-darwin-arm64e/Packages.xz
+ b17068e652658f411f1f9044211b70a1            35482 main/binary-darwin-arm64e/Packages.zst
+ d0de112c0a1541169932867978c3f8ab             1660 main/binary-darwin-arm64e/Release
+ d41d8cd98f00b204e9800998ecf8427e                0 testing/Contents-darwin-amd64
+ 8dc5aea5b03dff8595f096f9e368e888               32 testing/Contents-darwin-amd64.xz
+ 5d80401e01d33084c65e94f93351e94c               13 testing/Contents-darwin-amd64.zst
+ d41d8cd98f00b204e9800998ecf8427e                0 testing/Contents-darwin-arm64
+ 8dc5aea5b03dff8595f096f9e368e888               32 testing/Contents-darwin-arm64.xz
+ 5d80401e01d33084c65e94f93351e94c               13 testing/Contents-darwin-arm64.zst
+ d41d8cd98f00b204e9800998ecf8427e                0 testing/binary-darwin-amd64/Packages
+ 8dc5aea5b03dff8595f096f9e368e888               32 testing/binary-darwin-amd64/Packages.xz
+ 5d80401e01d33084c65e94f93351e94c               13 testing/binary-darwin-amd64/Packages.zst
+ cdf865d8c0524254adeff57c1bfe0aef             1659 testing/binary-darwin-amd64/Release
+ d41d8cd98f00b204e9800998ecf8427e                0 testing/binary-darwin-arm64/Packages
+ 8dc5aea5b03dff8595f096f9e368e888               32 testing/binary-darwin-arm64/Packages.xz
+ 5d80401e01d33084c65e94f93351e94c               13 testing/binary-darwin-arm64/Packages.zst
+ f116f5e6dd97f43926c743a369e6668d             1659 testing/binary-darwin-arm64/Release
+SHA1:
+ 71bb0ed0b97ab0700537bca315e17e4a3b867e19              252 Release
+ 16039e766c531adfa2227c6ae3305a9b449aafb7         13096094 main/Contents-darwin-amd64
+ 5501f4089647e02185b9f09e4cabecffa6af15e3           741576 main/Contents-darwin-amd64.xz
+ 2d49d6fa4f1ef6a9ae1cc182ddc87939b541eeb4           709768 main/Contents-darwin-amd64.zst
+ 16039e766c531adfa2227c6ae3305a9b449aafb7         13096094 main/Contents-darwin-arm64
+ 5501f4089647e02185b9f09e4cabecffa6af15e3           741576 main/Contents-darwin-arm64.xz
+ 2d49d6fa4f1ef6a9ae1cc182ddc87939b541eeb4           709768 main/Contents-darwin-arm64.zst
+ 5c1b1607616b4c3c5e330858e37ae610052d1542         11898845 main/Contents-darwin-arm64e
+ 935dbf9f24ee2f7a64838cd1d8499e242e2a3fb8           673504 main/Contents-darwin-arm64e.xz
+ db26562a8dcb3ab39b76d5baeffefd459696f3b3           642773 main/Contents-darwin-arm64e.zst
+ 26af63862db9c44a6a6a8452faa97d6837dcbdca          1702025 main/binary-darwin-amd64/Packages
+ fbb226871006255f34aed2d34f07856bf12aadb0           380700 main/binary-darwin-amd64/Packages.xz
+ 2591485742c2eced1013895abce85867ffb71c9b           390654 main/binary-darwin-amd64/Packages.zst
+ b939818f7b844f9cc02c0f8b76b0a236d0d845ac             1659 main/binary-darwin-amd64/Release
+ c3e30cff3368b1e31213fff55a8f51a6f5152c4c          1715804 main/binary-darwin-arm64/Packages
+ b4d12cd51188a5c14acf5300ea41a5e7572494d2           383936 main/binary-darwin-arm64/Packages.xz
+ 2f7ac3015c5f68634f395f41103713ebdee78203           394647 main/binary-darwin-arm64/Packages.zst
+ bf77fc9c62f1d0e684f404f8b7e958f77d231781             1659 main/binary-darwin-arm64/Release
+ 548ac729771fe524a06ce7f1b548e81ab6cf138f           186125 main/binary-darwin-arm64e/Packages
+ 08529276cb4e92ce8626bc4a2c6be7e0fe4e5c6d            33636 main/binary-darwin-arm64e/Packages.xz
+ 597b65c716f037eb64951a5c57a0c939da134ea4            35482 main/binary-darwin-arm64e/Packages.zst
+ b9108ce1efd6d966a22679671f4ab7e9b62623a0             1660 main/binary-darwin-arm64e/Release
+ da39a3ee5e6b4b0d3255bfef95601890afd80709                0 testing/Contents-darwin-amd64
+ 9746882f4236fa1c3a8f86be2f1d9c46680c0b10               32 testing/Contents-darwin-amd64.xz
+ fb2e51cbd24e286dd066bd419d77cd772967e384               13 testing/Contents-darwin-amd64.zst
+ da39a3ee5e6b4b0d3255bfef95601890afd80709                0 testing/Contents-darwin-arm64
+ 9746882f4236fa1c3a8f86be2f1d9c46680c0b10               32 testing/Contents-darwin-arm64.xz
+ fb2e51cbd24e286dd066bd419d77cd772967e384               13 testing/Contents-darwin-arm64.zst
+ da39a3ee5e6b4b0d3255bfef95601890afd80709                0 testing/binary-darwin-amd64/Packages
+ 9746882f4236fa1c3a8f86be2f1d9c46680c0b10               32 testing/binary-darwin-amd64/Packages.xz
+ fb2e51cbd24e286dd066bd419d77cd772967e384               13 testing/binary-darwin-amd64/Packages.zst
+ 3addee4c29b7d836b82bbfae1e441447ee6bd82e             1659 testing/binary-darwin-amd64/Release
+ da39a3ee5e6b4b0d3255bfef95601890afd80709                0 testing/binary-darwin-arm64/Packages
+ 9746882f4236fa1c3a8f86be2f1d9c46680c0b10               32 testing/binary-darwin-arm64/Packages.xz
+ fb2e51cbd24e286dd066bd419d77cd772967e384               13 testing/binary-darwin-arm64/Packages.zst
+ 5aa2d3a1d61b3429a7c385a8f56b00e33dfad450             1659 testing/binary-darwin-arm64/Release
+SHA256:
+ ee747e130088ce2395a0d9b77d98839cc1f2857e2b018acb17534451aa120d3b              252 Release
+ 54d09ca6bd51d4f4934412f9cf7c96ae5652db8e6ee2712eb7ea2367032266b2         13096094 main/Contents-darwin-amd64
+ bb2b7f6524fa9b9d4fe0b44b2d4b5393aa76040acf46cccbc2235ac750d42171           741576 main/Contents-darwin-amd64.xz
+ fd22b042fe1eaf7bf516b18d975b4b6ea0503ab4b5deb636c6981fc69443e473           709768 main/Contents-darwin-amd64.zst
+ 54d09ca6bd51d4f4934412f9cf7c96ae5652db8e6ee2712eb7ea2367032266b2         13096094 main/Contents-darwin-arm64
+ bb2b7f6524fa9b9d4fe0b44b2d4b5393aa76040acf46cccbc2235ac750d42171           741576 main/Contents-darwin-arm64.xz
+ fd22b042fe1eaf7bf516b18d975b4b6ea0503ab4b5deb636c6981fc69443e473           709768 main/Contents-darwin-arm64.zst
+ 76bcf1e5cf0d53857112876b16f71949798e42f740ff3c6b20efbf5ee13b588f         11898845 main/Contents-darwin-arm64e
+ 78da5b3c46bd618529b7db09747fd626db5aaaf8c0d752b465f1dfdf1e33f20c           673504 main/Contents-darwin-arm64e.xz
+ 8a9d7a28dbc8e9dc30c0c307d37e187601e7a17d203d3069b5f98689baa34ca2           642773 main/Contents-darwin-arm64e.zst
+ 34b44acc74876181f6f1ec6feb977a819baef6a5672c1277cf30a4ae1b3dedba          1702025 main/binary-darwin-amd64/Packages
+ 9ed74d63da8d7cde63e6b7771bb7a3db17842f2431911e47321e42b81bfb9979           380700 main/binary-darwin-amd64/Packages.xz
+ 5884b36714b0f8f245de3a5eb7fb4be63fb6065336fb114baf36519a44c80ccc           390654 main/binary-darwin-amd64/Packages.zst
+ b1f6a342d7c47c53b5cae0ab7d49f8a7ec4179ebc0d02816dd641de448f874cb             1659 main/binary-darwin-amd64/Release
+ 2e62c06a4537b3cedc7b89f2259a0a6ac1f851e78d897c3e5d8b0959e8f69109          1715804 main/binary-darwin-arm64/Packages
+ 939211aa30e4aaec77b83d3044e573f0e0656d4e6f463bd18e318a921c826583           383936 main/binary-darwin-arm64/Packages.xz
+ c3c5bf5844e249490bf231d69c1ddb5ed8d6a15854e040478bd378af7efb582f           394647 main/binary-darwin-arm64/Packages.zst
+ ab4772419ab30cff27f5a0f3e71b2a86e846020ca9950c0d9c62fa9aee2372bf             1659 main/binary-darwin-arm64/Release
+ b7dbce9cd0092b30b3366ebb107e8279ce02fa845f9395cce146bec11ad2573b           186125 main/binary-darwin-arm64e/Packages
+ de75b3a08f107d8470166a522753ec0870b4d614df761d0c039b10b7e302f1ed            33636 main/binary-darwin-arm64e/Packages.xz
+ 135f3767ba7272a773df607c3464d1989443a8c34c1061ad3157122501dd1893            35482 main/binary-darwin-arm64e/Packages.zst
+ a07a4f9346d876dfe13d3263d17ee367d00e8415b589242a6bf1b143a85289e3             1660 main/binary-darwin-arm64e/Release
+ e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855                0 testing/Contents-darwin-amd64
+ 0040f94d11d0039505328a90b2ff48968db873e9e7967307631bf40ef5679275               32 testing/Contents-darwin-amd64.xz
+ f96deff1816083fdff8bc3e46c3fe6ca46a6bb49f4d5a00627616c13237a512c               13 testing/Contents-darwin-amd64.zst
+ e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855                0 testing/Contents-darwin-arm64
+ 0040f94d11d0039505328a90b2ff48968db873e9e7967307631bf40ef5679275               32 testing/Contents-darwin-arm64.xz
+ f96deff1816083fdff8bc3e46c3fe6ca46a6bb49f4d5a00627616c13237a512c               13 testing/Contents-darwin-arm64.zst
+ e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855                0 testing/binary-darwin-amd64/Packages
+ 0040f94d11d0039505328a90b2ff48968db873e9e7967307631bf40ef5679275               32 testing/binary-darwin-amd64/Packages.xz
+ f96deff1816083fdff8bc3e46c3fe6ca46a6bb49f4d5a00627616c13237a512c               13 testing/binary-darwin-amd64/Packages.zst
+ a2af1186c1c0c4f665316a2bf95c7ae53ac459b43677ab1d9ed45e910a673231             1659 testing/binary-darwin-amd64/Release
+ e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855                0 testing/binary-darwin-arm64/Packages
+ 0040f94d11d0039505328a90b2ff48968db873e9e7967307631bf40ef5679275               32 testing/binary-darwin-arm64/Packages.xz
+ f96deff1816083fdff8bc3e46c3fe6ca46a6bb49f4d5a00627616c13237a512c               13 testing/binary-darwin-arm64/Packages.zst
+ 5fe19de2effc85226619685862c831a4db6fd47014cc5c4dcd42c7525b619b53             1659 testing/binary-darwin-arm64/Release
+SHA512:
+ 16b84bfc72dd0189d93be0937673ade7ef09e77718ca9cc1082a978ed997a23ef38ab566204720f96d9ee0aa796a8694c38299b23ae80d0fce70f3e9d1fcb1dd              252 Release
+ ab77a6e38172411d0f4fd55a25c3ad4fbd911c741175a7df2d2053b7896971cac63e2cf6505eed5579500ad14e2972147c7c1075f5140d3506adcb84fcfe6f90         13096094 main/Contents-darwin-amd64
+ 94e07378237619cf7879eea9d54db9e22d0a1a7e9b7f5ee03b00852be9ecba24e179ee40b81ddb85e98821b9dcb27da321288dbf7d998143e158006e1aa83446           741576 main/Contents-darwin-amd64.xz
+ e9e70e6b73787752a779b86a56b0e0ac83e227a923651547e58c4ba0c4eda4464a0c655080580ff29638904a74c6e3499da8bd159e9dde80b0081114cc90a8d5           709768 main/Contents-darwin-amd64.zst
+ ab77a6e38172411d0f4fd55a25c3ad4fbd911c741175a7df2d2053b7896971cac63e2cf6505eed5579500ad14e2972147c7c1075f5140d3506adcb84fcfe6f90         13096094 main/Contents-darwin-arm64
+ 94e07378237619cf7879eea9d54db9e22d0a1a7e9b7f5ee03b00852be9ecba24e179ee40b81ddb85e98821b9dcb27da321288dbf7d998143e158006e1aa83446           741576 main/Contents-darwin-arm64.xz
+ e9e70e6b73787752a779b86a56b0e0ac83e227a923651547e58c4ba0c4eda4464a0c655080580ff29638904a74c6e3499da8bd159e9dde80b0081114cc90a8d5           709768 main/Contents-darwin-arm64.zst
+ d5d220d3f168c28e6b1f08d670722e821e0ef8ed695cbfda0c64cbdf7b0272bdb41df77cb77f2115fa156348d109dea2fda79794cfdf0e582f0a8465b014d683         11898845 main/Contents-darwin-arm64e
+ 2fb26e6989262fb2823efcc7d9ded88a643c3a4b7c351a1d8f1a6b81dd2f1b74af8258f751132d3244cb9c041978b85aab89f9fd9676c0dce62e9f0388c881e6           673504 main/Contents-darwin-arm64e.xz
+ 62643b2c8abb4ef726e47c79f525123e5652ef53472878475b261265345d3b404d0c045271f19a3596ca4c179b36730c7ba4d4bd1bf7e3d696e9bf09631cb533           642773 main/Contents-darwin-arm64e.zst
+ 158a337df8cef59bc57d05f4e5ab31b323452c1277c2c33ef94557aa3bc3efbb250efdc6d785a3b8c7e558b19f4e6007437378db4505cd8f13633d65067aa52a          1702025 main/binary-darwin-amd64/Packages
+ ea003508a86409cc71acf4a71bb05b42bd7a8d89ddc0ff015c2abe038506f9cc8dd0c3cc5a663fc908f604bc86fc8025780c765857fc5f3d1b4fb360a42ac1d9           380700 main/binary-darwin-amd64/Packages.xz
+ d9cb1597fd64c4a6843b6bbfbb9a320c8142fd8fa9582fb7ab1af315c0287fdbac3fb63c36b488ecaff960451eb58902eec76e19afa57ba8723007f46eb725d1           390654 main/binary-darwin-amd64/Packages.zst
+ 761dbfbc8d561796a1384d02bce4b91c3ec7632a82c3f9fb56a1a32ed329f20904ce59d4a51fdb437982e1fbdc43c433f422a2b7aaf4e7272d33577d20ec10fe             1659 main/binary-darwin-amd64/Release
+ 6db901439dad1676074251bfbb92d4f15393bce671296deb666f1fd5140035d0b59ecd01fe1f9d6ae67bb832bc490e84e9de238f6785f827d9d2b054fcab32af          1715804 main/binary-darwin-arm64/Packages
+ daf2787068a2c17542c1117e245fc9c5d8c7e0a28ab8b3ba126da38925bda005d935dce7ebb531a1e92b61fde16580c645c9144d307447e9c566f4731eb50f50           383936 main/binary-darwin-arm64/Packages.xz
+ 4a9c8ff1b4027fd1964f2c1023a04ddfe31d40a54c6f9babcffee05152476aa76dbc44dea0e81490b8948390bc979458239d234518eaacafa37ec8a8bc31bd60           394647 main/binary-darwin-arm64/Packages.zst
+ 13fc436758a120a849d77d4d428017fb475667c6c35228792a94ca5eb56a1ce31ad54bba8ec845cc386f21d2befc977c0cc997be704f360e3699cb43c5dcd9c7             1659 main/binary-darwin-arm64/Release
+ e67521d93c5ee2749fd35f6e303e8681c480391a8af3b02fcf62dbff215ab3693aba54d8c67d362d712860eac714c5f3bb2a270898884ca29764aeab8f37cedd           186125 main/binary-darwin-arm64e/Packages
+ 0317d661e5c44455d734bacbc3aa1a90924992e15f15c8892c2fc462558affc9b7d0ec8c9aabc13a0795df1b3e1bba167d8a16bbe1ebb6e06dd94926509e3f37            33636 main/binary-darwin-arm64e/Packages.xz
+ 26c20d5d77c3929bb108370fcbd710abf629552fe2621adf4d218ed399159559f278a21fecad8f40c5d1b4a571fe27ee8d56fb613c9396db31ab25f8eeadc2a7            35482 main/binary-darwin-arm64e/Packages.zst
+ e7971f0267c4b4b6b7bfba4570aea31296fc3b6e80055c50ee86f1a764367f1b31651683f844f98604ce9a790155c209ed52700c96730439685d3d1f888421a2             1660 main/binary-darwin-arm64e/Release
+ cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e                0 testing/Contents-darwin-amd64
+ 034b32f1138322638c7a5b7949a3b184c6a4cdfd003360a496c08c56c2cc645c94fbe9cdf9d84c963af6dda6c442717cd61d7e1cecf7024bd463f6f5196c5527               32 testing/Contents-darwin-amd64.xz
+ 654b3bc259db923bca2fb5ac8d8c2aa5ceddf594cce152d2a467850ae092317206e3bea307c8528e05442811f5ef8c4ccb9daa4da2a56ddc7f436c6ee1aee7d0               13 testing/Contents-darwin-amd64.zst
+ cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e                0 testing/Contents-darwin-arm64
+ 034b32f1138322638c7a5b7949a3b184c6a4cdfd003360a496c08c56c2cc645c94fbe9cdf9d84c963af6dda6c442717cd61d7e1cecf7024bd463f6f5196c5527               32 testing/Contents-darwin-arm64.xz
+ 654b3bc259db923bca2fb5ac8d8c2aa5ceddf594cce152d2a467850ae092317206e3bea307c8528e05442811f5ef8c4ccb9daa4da2a56ddc7f436c6ee1aee7d0               13 testing/Contents-darwin-arm64.zst
+ cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e                0 testing/binary-darwin-amd64/Packages
+ 034b32f1138322638c7a5b7949a3b184c6a4cdfd003360a496c08c56c2cc645c94fbe9cdf9d84c963af6dda6c442717cd61d7e1cecf7024bd463f6f5196c5527               32 testing/binary-darwin-amd64/Packages.xz
+ 654b3bc259db923bca2fb5ac8d8c2aa5ceddf594cce152d2a467850ae092317206e3bea307c8528e05442811f5ef8c4ccb9daa4da2a56ddc7f436c6ee1aee7d0               13 testing/binary-darwin-amd64/Packages.zst
+ 2e9466018cee846794da2a10cc790190b7a6d7c4f4770ef2ac5ca8bd831ab6285e33791aec47395bd88441d8ef96e278f95d558bd8ebbd71bfb8acaec8e86b3d             1659 testing/binary-darwin-amd64/Release
+ cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e                0 testing/binary-darwin-arm64/Packages
+ 034b32f1138322638c7a5b7949a3b184c6a4cdfd003360a496c08c56c2cc645c94fbe9cdf9d84c963af6dda6c442717cd61d7e1cecf7024bd463f6f5196c5527               32 testing/binary-darwin-arm64/Packages.xz
+ 654b3bc259db923bca2fb5ac8d8c2aa5ceddf594cce152d2a467850ae092317206e3bea307c8528e05442811f5ef8c4ccb9daa4da2a56ddc7f436c6ee1aee7d0               13 testing/binary-darwin-arm64/Packages.zst
+ 1cf76fde6eee72020e6c47d29e12a2974324654fd8046e91d700169dcdf3a715fffbe91121b3fcd5e6bbb0dd6833ad5a5fdb9f2a912afde43adac374f1262597             1659 testing/binary-darwin-arm64/Release
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCAAdFiEExZ83mKMFrdfn5sclZDApLPlVGw4FAmMKj34ACgkQZDApLPlV
+Gw7Jfg//cZwEcxv4AH5ZTBFOKXMNnaWWaXfWmyRuo4CDfEqZkqLs0DYbVQ6gTC2U
+dFXVnuB7wakdN+Kr5/hPWfFHEs0X8g7ClKxikQDy04MsmVnvNMZwD95Uy61rJLf3
+Z4im8sUUQ02AA4yzbIVvCzf7VyZ/qe+dhkHnxNgKTyY0ziAvFyX6Se9E8ofDUEGJ
+EqGLf+Km4IlYSAtSEB9nd9Di3m6mV+Yyv7aWuluPPJcZ4Q7w7gm7JEcdp5nE+9Ws
+O0H0FNTa92Tj0McBSH6CLIpQTojc1dE4hCvcyv0HIj94PBYZWXCgu2p/Xb3WLApC
+NfEnQQdmiWWciRpAj88QCtCQo0IOImEv3lCmbRIYiUXf59zA6lUU2US7bl8yv2Je
+YXdQcAdant825jpQRymd+flpRVPK6x5SdCv9khokk/GU+7XYqs2lYcZbAlZBkh08
+uTvy7WhRU1DnLdhsdI+7ANrAEyhw6GRKR/UggCJ92iXa2qoQ82a41yZtPVboUBAt
+Pr/7lChKfrL8yTtUhi37gwjSXKUwRhWruhE29KNYYEQJryzKqWyGgof6hb7zNe+3
+ZS5GGoHj7h/A99JDiruQv6h2+5lgT8vwoxYjBeJ7wwmLl+qw2CMqh4B9/p3I1dZE
+D6OlwWuYqJ4h13BfAsgkI71dbh7ag/uH7ALG+mXGuri4ccrB1VI=
+=2znI
+-----END PGP SIGNATURE-----

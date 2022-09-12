@@ -1,0 +1,11 @@
+/.
+/opt
+/opt/procursus
+/opt/procursus/lib
+/opt/procursus/lib/libzstd.1.5.2.dylib
+/opt/procursus/share
+/opt/procursus/share/doc
+/opt/procursus/share/doc/libzstd1
+/opt/procursus/share/doc/libzstd1/COPYING
+/opt/procursus/share/doc/libzstd1/LICENSE
+/opt/procursus/lib/libzstd.1.dylib
