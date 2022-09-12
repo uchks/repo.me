@@ -1,36 +1,33 @@
 name: Update Repository 
-on: push
-workflow_dispatch
+on:
+  push:
+  workflow_dispatch:
 
 jobs:
   build:
     name: Update Repository
     runs-on: macos-latest
     steps:
-      run : | 
-      echo "${{ github.event_name }}."
-      echo "${{ runner.os }}."
-      echo "${{ github.ref }} ${{ github.repository }}."
-      
       - uses: actions/checkout@v3
         with:
           ref: 'main'
           submodules: true
-        
+          
       - name: Prepare Procursus
         uses: localdevice/procursus-action@main
         with:
           packages: apt-utils gzip bzip2 xz-utils zstd
           cache-path: ${{ github.workspace }}/procursus
-        
-      run : |
-      echo "${{ github.repository }}."
-      echo "Runner Ready."
-      ls ${{ github.workspace }}
-      ./updaterepo.sh
-      git config --global user.email "example@mail.com"
-      git config --global user.name "Example"
-      git add "${{ github.workspace }}"
-      git commit -a -m "Push Repo"
-      git push
-      echo "${{ job.status }}."
+          
+      - name: Push Repo
+        run : |
+          echo "${{ github.repository }}."
+          echo "Runner Ready."
+          ls ${{ github.workspace }}
+          ./updaterepo.sh
+          git config --global user.email "example@mail.com"
+          git config --global user.name "Example"
+          git add "${{ github.workspace }}"
+          git commit -a -m "Push Repo"
+          git push
+          echo "${{ job.status }}."
