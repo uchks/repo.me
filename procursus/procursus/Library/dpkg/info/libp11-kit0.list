@@ -1,8 +1,0 @@
-/.
-/opt
-/opt/procursus
-/opt/procursus/etc
-/opt/procursus/etc/pkcs11
-/opt/procursus/etc/pkcs11/pkcs11.conf.example
-/opt/procursus/lib
-/opt/procursus/lib/libp11-kit.0.dylib

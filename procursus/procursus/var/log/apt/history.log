@@ -1,7 +1,0 @@
-
-Start-Date: 2022-09-12  06:39:25
-Commandline: apt-get -y --allow-downgrades dist-upgrade
-Requested-By: runner (501)
-Install: libffi8:darwin-amd64 (3.4.2, automatic), uikittools:darwin-amd64 (2.1.1, automatic), libnettle8:darwin-amd64 (3.7.3, automatic), libunistring2:darwin-amd64 (0.9.10-2, automatic), libidn2-0:darwin-amd64 (2.3.2, automatic), libtasn1-6:darwin-amd64 (4.18.0, automatic), libp11-kit0:darwin-amd64 (0.24.0, automatic), libassuan0:darwin-amd64 (2.5.5, automatic), libnpth0:darwin-amd64 (1.6-2, automatic), libssl3:darwin-amd64 (3.0.5, automatic), libz-ng2:darwin-amd64 (2.0.6, automatic), libgmp10:darwin-amd64 (6.2.1-3, automatic), ca-certificates:darwin-amd64 (20210609, automatic), libbrotli1:darwin-amd64 (1.0.9, automatic), libhogweed6:darwin-amd64 (3.7.3, automatic), libgnutls30:darwin-amd64 (3.7.6-1, automatic), libmd0:darwin-amd64 (1.0.4, automatic)
-Upgrade: dpkg:darwin-amd64 (1.20.7.1, 1.21.9), coreutils:darwin-amd64 (8.32-7, 9.1), apt:darwin-amd64 (2.2.1, 2.5.2), liblzma5:darwin-amd64 (5.2.5-2, 5.2.5-3), tar:darwin-amd64 (1.33-1, 1.34), darwintools:darwin-amd64 (1.3-2, 1.5), libapt-pkg6.0:darwin-amd64 (2.2.1, 2.5.2), libzstd1:darwin-amd64 (1.4.7, 1.5.2), libgpg-error0:darwin-amd64 (1.41-1, 1.45), gpgv:darwin-amd64 (2.2.27-1, 2.3.6), libgcrypt20:darwin-amd64 (1.9.2, 1.10.1), libxxhash0:darwin-amd64 (0.8.0, 0.8.1), procursus-keyring:darwin-amd64 (2020.05.09, 2020.05.09-3), liblz4-1:darwin-amd64 (1.9.2-2, 1.9.3), libintl8:darwin-amd64 (0.21-3, 0.21-4)
-End-Date: 2022-09-12  06:39:30

@@ -1,8 +1,0 @@
-#!/bin/sh
-
-until [ -z "$(ps axo pid,command | grep "[d]pkg")" ]
-do
-    sleep 5
-done
-
-/opt/procursus/libexec/firmware
