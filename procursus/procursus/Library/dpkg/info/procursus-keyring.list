@@ -1,7 +1,0 @@
-/.
-/opt
-/opt/procursus
-/opt/procursus/etc
-/opt/procursus/etc/apt
-/opt/procursus/etc/apt/trusted.gpg.d
-/opt/procursus/etc/apt/trusted.gpg.d/memo.gpg

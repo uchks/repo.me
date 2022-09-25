@@ -1,3 +1,0 @@
-#!/bin/sh
-
-nohup /opt/procursus/libexec/firmware-wrapper >/dev/null 2>&1 &
