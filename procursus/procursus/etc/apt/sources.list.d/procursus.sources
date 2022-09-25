@@ -1,0 +1,5 @@
+Types: deb
+URIs: https://apt.procurs.us
+Suites: big_sur
+Components: main
+

@@ -1,0 +1,3 @@
+#!/bin/sh
+
+rm -f /opt/procursus/bin/dpkg*.dpkg-tmp

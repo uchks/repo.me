@@ -1,0 +1,10 @@
+/.
+/opt
+/opt/procursus
+/opt/procursus/lib
+/opt/procursus/lib/libbrotlicommon.1.0.9.dylib
+/opt/procursus/lib/libbrotlidec.1.0.9.dylib
+/opt/procursus/lib/libbrotlienc.1.0.9.dylib
+/opt/procursus/lib/libbrotlicommon.1.dylib
+/opt/procursus/lib/libbrotlidec.1.dylib
+/opt/procursus/lib/libbrotlienc.1.dylib

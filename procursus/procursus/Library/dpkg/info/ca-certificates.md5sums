@@ -1,0 +1,2 @@
+d8da27b30e0ce1413343ff6dc088ba93  opt/procursus/etc/ssl/certs/cacert.pem
+df9d8a0fff487eb713cfd7474254abf3  opt/procursus/etc/profile.d/cacerts.bootstrap.sh

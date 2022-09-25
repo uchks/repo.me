@@ -1,0 +1,13 @@
+/.
+/opt
+/opt/procursus
+/opt/procursus/lib
+/opt/procursus/lib/libtasn1.6.dylib
+/opt/procursus/share
+/opt/procursus/share/doc
+/opt/procursus/share/doc/libtasn1-6
+/opt/procursus/share/doc/libtasn1-6/AUTHORS
+/opt/procursus/share/doc/libtasn1-6/COPYING
+/opt/procursus/share/doc/libtasn1-6/NEWS.zst
+/opt/procursus/share/doc/libtasn1-6/README.zst
+/opt/procursus/share/doc/libtasn1-6/THANKS.zst
