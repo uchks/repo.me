@@ -1,14 +1,14 @@
 <repo>
     <footerlinks>
         <link>
-            <name>Follow me on Twitter</name>
-            <url>https://twitter.com/?</url>
-            <iconclass>glyphicon glyphicon-user</iconclass>
+            <name>Follow me on X</name>
+            <url>https://x.com/?</url> # Feel free to swap your X in for this!
+            <iconclass>fa-brands fa-x-twitter</iconclass>
         </link>
-        <link>
+        <link> # You can remove this if you wish, however if I may, please do not do so! It will allow others to find repo.me such as you have!
             <name>I want this depiction template</name>
             <url>https://github.com/uchks/repo.me</url>
-            <iconclass>glyphicon glyphicon-thumbs-up</iconclass>
+            <iconclass>fa-solid fa-thumbs-up</iconclass>
         </link>
     </footerlinks>
 </repo>
