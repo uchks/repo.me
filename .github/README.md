@@ -6,20 +6,22 @@
 > I'm actively looking for contributors! I no longer keep up with the jailbreak scene.
 
 ## Table of Contents
-1. [Background Information](#background-information)  
-2. [Setup](#setup)  
-    - [Dependencies](#dependencies)  
-    - [Download / Fork repo.me](#download--fork-repome)  
-    - [Personalization](#personalization)  
-        - Branding
-        - Page Footers
-        - Depictions 
-            - [Webview / Cydia Depictions](#webview--cydia-depictions)  
-            - [Native / Sileo Depictions](#native--sileo-depictions)  
-            - [Linking the Depiction](#linking-the-depiction)  
+
+1. [Background Information](#background-information)
+2. [Setup](#setup)
+   - [Dependencies](#dependencies)
+   - [Download / Fork repo.me](#download--fork-repome)
+   - [Personalization](#personalization)
+     - Branding
+     - Page Footers
+     - Depictions
+       - [Webview / Cydia Depictions](#webview--cydia-depictions)
+       - [Native / Sileo Depictions](#native--sileo-depictions)
+       - [Linking the Depiction](#linking-the-depiction)
 3. [Sileo "Extras"](#sileo-extras)
 
 ### Background Information
+
 repo.me was created to help new tweak developers. The goal was to make it easy to maintain a personal repository and show their work to the community. Unfortunately, it didn't gain much traction, for contributing that is. Only two people contributed, and that was a long time ago. Since then, it has been inactive while the jailbreaking community moved on. Now, it's just a side project for me, still meant to help new developers and keep community standards.
 
 This template shows how you can easily make depiction pages without copying your HTML pages.
@@ -33,15 +35,19 @@ Found something that can be improved? Found a mistake? Please make a pull reques
 ### Setup
 
 #### Dependencies
-1. **`apt-ftparchive`**
-    - For Windows, it will automatically be downloaded.
-    - For macOS, install via Procursus `apt-utils`; otherwise, it will be automatically downloaded.
-    - For iOS / iPadOS, install via Procursus `apt-utils` (Elucubratus users, this is not verified).
+
+1. **`apt-ftparchive`** <br>
+   Required to generate the Packages file:
+
+   - Windows: It will be automatically downloaded.
+   - macOS: Install via Procursus `apt-utils`; otherwise, it will be automatically downloaded.
+   - iOS / iPadOS: install via Procursus `apt-utils` (Elucubratus users, this is not verified).
 
 2. **`wget, zstd, xz, lz4, & gpg`**
-    - The script will automatically check for homebrew / Procursus installation and dependencies. If not found, don't worry; everything will be taken care of for you.
+   - `updaterepo.sh` will automatically install these if Homebrew or Procursus is available.
 
 #### Download / Fork repo.me
+
 If you are _not_ hosting your repository on [GitHub Pages](https://pages.github.com/), you can download the zip file [here](https://github.com/uchks/repo.me/archive/master.zip) and extract it to a subfolder on your website.
 
 There are two options for those using [GitHub Pages](https://pages.github.com/):
@@ -81,7 +87,9 @@ The data below are the links that appear at the bottom of every **Webview / Cydi
 ```
 
 **Depictions**
+
 ##### Webview / Cydia Depictions
+
 Go to the depictions folder and duplicate the folder `com.example.sample`.
 Rename the duplicate with the same name as your package name.
 There are two files inside the folder - `info.xml` and `changelog.xml`.
@@ -130,23 +138,25 @@ Contact [hi@air.rip](mailto:hi@air.rip) for questions.
 ```
 
 ##### Native / Sileo Depictions
+
 Go to the `/depictions/native/com.example.sample` folder and copy the file `depiction.json`.
 Move it into a folder labeled as your package name.
 Edit the labeled parts (i.e., VERSION_NUMBER, TWEAK_NAME, etc.).
 Contact [hi@air.rip](mailto:hi@air.rip) for questions.
 
 #### Linking the Depiction
+
 You can add the depictions URL at the end of your package's `control` file before compiling it.
 The depiction line should look like this:
 
 ```text
-Depiction: https://username.github.io/repo/depictions/web/?p=[idhere]
+Depiction: https://username.github.io/repo/depictions/web?p=[idhere]
 ```
 
 Replace `[idhere]` with your actual package name.
 
 ```text
-Depiction: https://username.github.io/repo/depictions/web/?p=com.example.sample
+Depiction: https://username.github.io/repo/depictions/web?p=com.example.sample
 ```
 
 For native depictions, add the `SileoDepiction` key alongside the `Depiction` in your `control` file before compiling it.
@@ -163,6 +173,7 @@ Push your changes and, if you haven't done so yet, go ahead and add your reposit
 You should now be able to install your tweak from your repository.
 
 ### Sileo "Extras"
+
 **Featured Packages (`sileo-featured.json`)**
 
 Change the following lines:
@@ -173,4 +184,4 @@ Change the following lines:
  "package": "com.example.sample" // The Actual Package
 ```
 
-<p align="center">Special thanks and credits to: <a href="https://github.com/Supermamon/">Supermamon</a> for <a href="https://github.com/supermamon/Reposi3">Reposi3</a> (the base) & <a href="https://github.com/Diatrus/">Diatrus</a> for `apt-ftparchive` on macOS.</p>
+<p align="center">Special thanks and credits to: <a href="https://github.com/Supermamon/">Supermamon</a> for <a href="https://github.com/supermamon/Reposi3">Reposi3</a> (the base) & <a href="https://github.com/Diatrus/">Diatrus</a> for <code>apt-ftparchive</code> on macOS.</p>

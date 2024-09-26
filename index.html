@@ -1,9 +1,155 @@
-<pre><center>
-<title>repo.me</title> <!-- Change this to your alias or repo name! -->
-<h1>repo.me</h1> <!-- Change this to your alias or repo name! -->
-<li>Add to <a class="btn btn-sm btn-default" href="cydia://url/https://cydia.saurik.com/api/share#?source=https://REPLACEHERE">Cydia</a></li> <!-- Put your repo URL in REPLACEHERE, remove this comment. -->
-<li>Add to <a class="btn btn-sm btn-default" href="installer://add/https://REPLACEHERE">Installer</a></li> <!-- Put your repo URL in REPLACEHERE, remove this comment. -->
-<li>Add to <a class="btn btn-sm btn-default" href="sileo://source/https://REPLACEHERE">Sileo</a></li> <!-- Put your repo URL in REPLACEHERE, remove this comment. -->
-<li>Add to <a class="btn btn-sm btn-default" href="zbra://sources/add/https://REPLACEHERE">Zebra</a></li> <!-- Put your repo URL in REPLACEHERE, remove this comment. -->
-thanks for using <a class="btn btn-sm btn-default" href="https://github.com/uchks/repo.me">repo.me</a> by uchks! <!-- This can be removed, but I'd appreciate if this was left or edited to still include the link to repo.me! -->
-</center></pre>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>repo.me</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        background-color: #f8f9fa;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+      }
+
+      .repo-header {
+        background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+        color: white;
+        padding: 3rem 0;
+        margin-bottom: 2rem;
+      }
+
+      .repo-header img {
+        width: 64px;
+        height: 64px;
+        margin-right: 1rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .repo-header h1 {
+        margin: 0;
+        font-weight: 700;
+      }
+
+      .card {
+        border: none;
+        border-radius: 12px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        margin-bottom: 1.5rem;
+        transition: transform 0.2s;
+      }
+
+      .card:hover {
+        transform: translateY(-2px);
+      }
+
+      .card-header {
+        background-color: #fff;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        font-weight: 600;
+        padding: 1rem 1.25rem;
+      }
+
+      .btn-primary {
+        background-color: #4f46e5;
+        border-color: #4f46e5;
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        margin: 0.25rem;
+      }
+
+      .btn-primary:hover {
+        background-color: #4338ca;
+        border-color: #4338ca;
+      }
+
+      .section-title {
+        color: #111827;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="repo-header">
+      <div class="container">
+        <div class="d-flex align-items-center">
+          <img src="CydiaIcon.png" alt="Repository Icon" />
+          <h1>repo.me</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mb-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title mb-3">repo.me</h5>
+          <p class="card-text mb-4">
+            a modern apt repository template built by the community.
+          </p>
+          <div class="d-flex flex-wrap gap-2">
+            <a class="btn btn-primary" href="sileo://source/https://REPLACEHERE"
+              >Add to Sileo</a
+            >
+            <a
+              class="btn btn-primary"
+              href="zbra://sources/add/https://REPLACEHERE"
+              >Add to Zebra</a
+            >
+            <a class="btn btn-primary" href="apt-repo://https://REPLACEHERE"
+              >Add to Saily</a
+            >
+            <a
+              class="btn btn-primary"
+              href="cydia://url/https://cydia.saurik.com/api/share#?source=https://REPLACEHERE"
+              >Add to Cydia</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2 class="section-title">Featured Packages</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header">Old Package</div>
+            <div class="card-body">
+              <p class="card-text">
+                This is a sample package with minimal information. It also
+                simulates an old package that's incompatible only with iOS lower
+                than 7.0.
+              </p>
+              <a class="btn btn-primary" href="depictions/?p=com.example.sample"
+                >More info</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header">New Package</div>
+            <div class="card-body">
+              <p class="card-text">
+                This is a sample package with lots of information.
+              </p>
+              <a class="btn btn-primary" href="depictions/?p=com.example.sample"
+                >More info</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,7 +1,7 @@
 <package>
-	<id>com.example.sample</id>
-	<name>Sample Package</name>
-	<version>1.0</version>
+	<id>com.example.newsample</id>
+	<name>Full Package</name>
+	<version>2.0.0-1</version>
 	<compatibility>
 		<firmware>
 			<miniOS>7.0</miniOS>

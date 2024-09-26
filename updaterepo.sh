@@ -1,29 +1,22 @@
 #!/usr/bin/env bash
 
-set -e
+set -euo pipefail
 
 CONFIG_DIR="./assets/repo"
 CONFIG_FILE="$CONFIG_DIR/repo.conf"
 GPG_KEY_FILE=""
 key_id=""
-origin=""
-label=""
-codename=""
-description=""
 
 initialize_variables() {
-    origin=""
-    label=""
-    codename=""
-    description=""
+    local origin="" label="" codename="" description=""
 }
 
 load_config() {
     if [[ -f "$CONFIG_FILE" ]]; then
-        origin=$(grep 'Origin' "$CONFIG_FILE" | awk -F\" '{print $2}')
-        label=$(grep 'Label' "$CONFIG_FILE" | awk -F\" '{print $2}')
-        codename=$(grep 'Codename' "$CONFIG_FILE" | awk -F\" '{print $2}')
-        description=$(grep 'Description' "$CONFIG_FILE" | awk -F\" '{print $2}')
+        origin=$(awk -F\" '/Origin/ {print $2}' "$CONFIG_FILE")
+        label=$(awk -F\" '/Label/ {print $2}' "$CONFIG_FILE")
+        codename=$(awk -F\" '/Codename/ {print $2}' "$CONFIG_FILE")
+        description=$(awk -F\" '/Description/ {print $2}' "$CONFIG_FILE")
         GPG_KEY_FILE="${origin}-repo.gpg"
     else
         echo "Configuration file not found. Creating a new one."
@@ -55,14 +48,16 @@ EOL
 }
 
 generate_gpg_key() {
+    local realname="$1"
+    local email="$2"
     cat > gen-key-script <<EOL
 %no-protection
 Key-Type: RSA
 Key-Length: 4096
 Subkey-Type: RSA
 Subkey-Length: 4096
-Name-Real: $1
-Name-Email: $2
+Name-Real: $realname
+Name-Email: $email
 Expire-Date: 0
 %commit
 EOL
@@ -70,7 +65,7 @@ EOL
     gpg --batch --gen-key gen-key-script
     rm -f gen-key-script
 
-    key_id=$(gpg --list-secret-keys --keyid-format LONG | grep 'sec' | awk '{print $2}' | cut -d'/' -f2 | tail -n 1)
+    key_id=$(gpg --list-secret-keys --keyid-format LONG | awk '/^sec/{print $2}' | cut -d'/' -f2 | tail -n 1)
     echo -e "5\ny\n" | gpg --command-fd 0 --edit-key "$key_id" trust
 }
 
@@ -78,51 +73,49 @@ generate_or_input_key() {
     if [[ -f "$GPG_KEY_FILE" ]]; then
         echo "GPG key file $GPG_KEY_FILE already exists. Using existing key."
         key_id=$(gpg --with-colons --import-options show-only --import "$GPG_KEY_FILE" | awk -F: '/^pub/ { print $5 }')
-    else
-        echo "Do you want to generate a new GPG key or use an existing one? (enter 'gen' or 'use'): "
-        read action
+        return
+    fi
 
+    while true; do
+        read -rp "Do you want to generate a new GPG key or use an existing one? (gen/use): " action
         case "$action" in
             gen)
-                echo "Enter your name: "
-                read realname
-                echo "Enter your email: "
-                read email
+                read -rp "Enter your name: " realname
+                read -rp "Enter your email: " email
                 generate_gpg_key "$realname" "$email"
                 echo "Exporting the public key..."
                 gpg --export "$key_id" > "$GPG_KEY_FILE"
                 echo "GPG key exported to $GPG_KEY_FILE"
+                break
                 ;;
             use)
                 echo "List of available keys:"
                 gpg --list-secret-keys --keyid-format=long
-                echo "Enter the key ID (the value after 'sec' in the list above): "
-                read key_id
+                read -rp "Enter the key ID (the value after 'sec' in the list above): " key_id
                 echo "Exporting the public key..."
                 gpg --export "$key_id" > "$GPG_KEY_FILE"
                 echo "GPG key exported to $GPG_KEY_FILE"
+                break
                 ;;
             *)
-                clear
-                generate_or_input_key
+                echo "Invalid option. Please enter 'gen' or 'use'."
                 ;;
         esac
-    fi
+    done
 }
 
 edit_repo_conf() {
-    echo "Enter the Repository Name: "
-    read origin
+    read -rp "Enter the Repository Name: " origin
     label="$origin"
-    echo "Enter the Repository Codename: "
-    read codename
-    echo "Enter the Repository Description: "
-    read description
+    read -rp "Enter the Repository Codename: " codename
+    read -rp "Enter the Repository Description: " description
 
     save_config
 }
 
 update_repo() {
+    local apt_ftparchive
+
     if command -v apt-ftparchive &> /dev/null; then
         apt_ftparchive="apt-ftparchive"
     elif [[ -f "./apt-ftparchive" ]]; then
@@ -158,9 +151,9 @@ update_repo() {
 
 install_packages() {
     echo "Checking for required packages..."
-    packages=(apt-utils gnupg xz-utils zstd bzip2 lz4 gzip gawk)
+    packages="apt-utils gnupg xz-utils zstd bzip2 lz4 gzip gawk"
 
-    for package in "${packages[@]}"; do
+    for package in $packages; do
         if ! dpkg -s "$package" &> /dev/null; then
             sudo apt-get update
             sudo apt-get install -y "$package"
@@ -174,18 +167,19 @@ install_brew_packages() {
         /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
     fi
 
-    brew_packages=(wget gnupg xz zstd bzip2 lz4 gzip gawk)
+    brew_packages="wget gnupg xz zstd bzip2 lz4 gzip gawk"
 
-    for package in "${brew_packages[@]}"; do
-        brew list --verbose "$package" || brew install "$package"
-        clear
+    for package in $brew_packages; do
+        if ! brew list --verbose "$package" &> /dev/null; then
+            brew install "$package"
+        fi
     done
 }
 
 prepare_apt_ftparchive() {
     if ! command -v apt-ftparchive &> /dev/null; then
         wget -q -nc https://apt.procurs.us/apt-ftparchive
-        sudo chmod 751 ./apt-ftparchive
+        sudo chmod 755 ./apt-ftparchive
     fi
 
     if [[ "$OSTYPE" == "darwin"* ]]; then
@@ -213,7 +207,7 @@ main() {
             fi
             ;;
         *)
-            echo "Error: Running an unsupported operating system. Contact me via X: @uchkence"
+            echo "Error: Running an unsupported operating system. Email me: hi@air.rip"
             exit 1
             ;;
     esac
