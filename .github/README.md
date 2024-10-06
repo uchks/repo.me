@@ -3,7 +3,9 @@
 </p>
 
 > [!NOTE]  
-> I'm actively looking for contributors! I no longer keep up with the jailbreak scene.
+> I'm actively looking for contributors! I no longer keep up with the jailbreak scene. <br>
+> Already have a repository? Looking to share a repository? <br>
+> Check out [**jbredir**](https://jbredir.unethical.team), a website I made.
 
 ## Table of Contents
 
