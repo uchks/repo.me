@@ -1,17 +1,20 @@
 function getContentBlocks() {
+  const bundleid = $.QueryString.p;
+
   return {
     "#screenshotsList": {
       type: "custom",
       source: "package>screenshots>screenshot",
       render: (element, source) => {
-        if ($(source).size() === 0) {
+        if ($(source).length === 0) {
           $(element).append(
             $(
-              "<div class='alert alert-danger'>The aren't any screenshots for this package</div>"
+              "<div class='alert alert-danger'>There aren't any screenshots for this package</div>"
             )
           );
           return;
         }
+
         $.each(source, (index, data) => {
           const th = $("<div class='thumbnail'>");
           th.append($("<p>").text($(data).find("description").text()));
@@ -43,5 +46,5 @@ function populateContentBlocks(data, blocks, error, success) {
       $("#packageInformation").hide();
       error(textStatus);
     },
-  }); //ajax
+  });
 }

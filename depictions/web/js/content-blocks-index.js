@@ -1,4 +1,6 @@
 function getContentBlocks() {
+  const bundleid = $.QueryString.p;
+
   return {
     "#packageName": {
       type: "text",
@@ -53,18 +55,21 @@ function getContentBlocks() {
       source: "package>screenshots>screenshot",
       render: (element, source) => {
         $("#screenshotsLink").remove();
-        if ($(source).size() === 0) {
+        if ($(source).length === 0) {
           return;
         }
         // create screenshots link
         $("#descriptionList").append(
           $("<a class='link-item list-group-item'>")
-            .attr("href", `screenshots.html?p=${bundleid}`)
+            .attr("href", `screenshots?p=${bundleid}`)
             .text("Screenshots")
         );
       },
     },
-    "#versionBadge": { type: "text", source: "package>version" },
+    "#versionBadge": {
+      type: "text",
+      source: "package>version",
+    },
     "#changesList": {
       type: "list",
       source: "package>changelog>change",
@@ -79,13 +84,13 @@ function getContentBlocks() {
       source: "package>changelog>change",
       render: (element, source) => {
         $("#changelogLink").remove();
-        if ($(source).size() === 0) {
+        if ($(source).length === 0) {
           return;
         }
         // create changelog link
         $("#changesList").append(
           $("<a class='link-item list-group-item'>")
-            .attr("href", `changelog.html?p=${bundleid}`)
+            .attr("href", `changelog?p=${bundleid}`)
             .text("Full Changelog")
         );
       },
@@ -103,22 +108,22 @@ function getContentBlocks() {
       source: "package>links>link",
       paragraphElement: "<li class='list-group-item'>",
       render: (element, source) => {
-        if ($(source).size() === 0) {
+        if ($(source).length === 0) {
           $("#externalLinksContainer").remove();
+          return;
         }
 
         $.each(source, (index, data) => {
           const a = $("<a class='link-item list-group-item'>");
           a.attr("href", $(data).find("url").text());
-          if ($(data).find("iconclass")) {
+          if ($(data).find("iconclass").length) {
             const i = $("<span>");
             i.attr("class", $(data).find("iconclass").text());
-            console.log(i);
             $(a).append(i);
           }
           $(a).append($(data).find("name").text());
           $(element).append(a);
-        }); //each
+        });
       },
     },
   };
@@ -139,5 +144,5 @@ function populateContentBlocks(data, blocks, error, success) {
       $("#packageInformation").hide();
       error(textStatus);
     },
-  }); //ajax
+  });
 }

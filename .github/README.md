@@ -7,6 +7,8 @@
 > Already have a repository? Looking to share a repository? <br>
 > Check out [**jbredir**](https://jbredir.unethical.team), a website I made.
 
+**[Demo now available.](https://www.air.rip/repo.me)**
+
 ## Table of Contents
 
 1. [Background Information](#background-information)

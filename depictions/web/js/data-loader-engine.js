@@ -34,7 +34,7 @@ function data_loader_engine(contentBlocks, xml) {
       case "list": {
         let list = $(xml).find(contentInfo.source);
 
-        if (list.size() === 0) {
+        if (list.length === 0) {
           if (contentInfo.emptyListCallback) {
             contentInfo.emptyListCallback($(key));
           }

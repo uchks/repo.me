@@ -1,145 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>PackageName</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="style.css?rand=1">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script type="text/javascript" src="js/jquery.querystring.js"></script>
-  <script type="text/javascript" src="js/data-loader-engine.js"></script>
-  <script type="text/javascript" src="js/ios_version_check.js"></script>
-   <script type="text/javascript" src="js/content-blocks-index.js"></script>
-  <script type="text/javascript">
+  <head>
+    <title>Package Details</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+      integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link rel="stylesheet" href="../../style.css" />
+    <script src="js/jquery.querystring.js"></script>
+    <script src="js/data-loader-engine.js"></script>
+    <script src="js/ios_version_check.js"></script>
+    <script src="js/content-blocks-index.js"></script>
+    <script>
+      $(() => {
+        const bundleid = $.QueryString.p;
+        const contentBlocks = getContentBlocks();
 
-	bundleid = $.QueryString['p'];
+        populateContentBlocks(
+          `${bundleid}/info.xml`,
+          contentBlocks,
+          () => {
+            $("#packageError").show();
+            $("#packageInformation").hide();
+          },
+          (xml) => {
+            document.title = $(xml).find("package>name").text();
+          }
+        );
 
-	var contentBlocks = getContentBlocks();
+        // Set target="_blank" for links if on Cydia
+        if (navigator.userAgent.includes("Cydia")) {
+          $("a").attr("target", "_blank");
+        }
 
-    $( document ).ready(function() {
-		//return;
-		populateContentBlocks(
-			(bundleid+"/info.xml"),
-			contentBlocks,
-			() => {
-                $("#packageError").show();
-				$("#packageInformation").hide();				
-			},
-			(xml) => {
-				document.title = $(xml).find("package>name").text();
-			}
-		)
+        // Load repository footer links
+        $.ajax({
+          type: "GET",
+          dataType: "xml",
+          url: "../../repo.xml",
+          cache: false,
+          success: (xml) => {
+            $(xml)
+              .find("repo>footerlinks>link")
+              .each((_, link) => {
+                const $link = $(link);
+                const $a = $("<a>")
+                  .addClass("link-item list-group-item")
+                  .attr("href", $link.find("url").text());
 
-    }); // ready
-  </script>
-</head>
-<body>
-<br />
+                if ($link.find("iconclass").length) {
+                  $a.append($("<i>").addClass($link.find("iconclass").text()));
+                }
 
-<div id="packageInformation">
+                $a.append($link.find("name").text());
+                $("#repoFooterLinks").append($a);
+              });
+          },
+          error: () => $("#contactInfo").hide(),
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="packageInformation">
+      <div class="package-header">
+        <div class="container">
+          <h1 id="packageName">&nbsp;</h1>
+          <p id="packageShortDesc">&nbsp;</p>
+        </div>
+      </div>
 
-	<div id="packageHeader" class="container" style="display:block">
-		<div class="jumbotron">
-			<h1 id="packageName">&nbsp;</h1>
-			<p id="packageShortDesc">&nbsp;</p>
-		</div>
-	</div>
+      <div class="container">
+        <div id="compatibilityCheck" class="alert">&nbsp;</div>
+      </div>
 
-	<div class="container">
-	  <div id="compatibilityCheck" class="alert">&nbsp;</div>
-	</div>
+      <div class="container mb-4">
+        <h3 class="section-title">Description</h3>
+        <div class="card">
+          <ul id="descriptionList" class="list-group list-group-flush">
+            <li id="screenshotsLink" class="link-item list-group-item">
+              <i class="fa-solid fa-file-image"></i>
+              Screenshots
+            </li>
+          </ul>
+        </div>
+      </div>
 
-	<div class="container">
-		<h5>DESCRIPTION</h5>
-		<ul id="descriptionList" class="list-group">
-			<li id="screenshotsLink" class="link-item list-group-item">Screenshots</li>
-		</ul>
-	</div>
+      <div class="container mb-4">
+        <h3 class="section-title">
+          Current Version
+          <span id="versionBadge" class="badge ms-2"></span>
+        </h3>
+        <div class="card">
+          <ul id="changesList" class="list-group list-group-flush">
+            <li id="changelogLink" class="link-item list-group-item">
+              <i class="fa-solid fa-clock-rotate-left"></i>
+              Full Changelog
+            </li>
+          </ul>
+        </div>
+      </div>
 
-	<div class="container">
-		<h5>IN THIS VERSION <span id="versionBadge" class="badge" /></h5>
-		<ul id="changesList" class="list-group">
-			<li id="changelogLink"  class="link-item list-group-item">Full Changelog</li>
-		</ul>
-	</div>
-	<div class="container" id="dependenciesContainer">
-		<h5>DEPENDENCIES</h5>
-		<ul id="dependencyList" class="list-group">
-		</ul>
-	</div>
+      <div id="dependenciesContainer" class="container mb-4">
+        <h3 class="section-title">Dependencies</h3>
+        <div class="card">
+          <ul id="dependencyList" class="list-group list-group-flush"></ul>
+        </div>
+      </div>
 
-	<div class="container" id="externalLinksContainer">
-		<h5>LINKS</h5>
-		<ul id="externalLinksList" class="list-group">
-		</ul>
-	</div>
+      <div id="externalLinksContainer" class="container mb-4">
+        <h3 class="section-title">Links</h3>
+        <div class="card">
+          <ul id="externalLinksList" class="list-group list-group-flush"></ul>
+        </div>
+      </div>
 
-</div>
-<div id="packageError" style="display:none">
-	<div class="container">
-	  <div class="alert alert-danger">
-		<strong>Oh snap!</strong> The package you are trying to view is not hosted on this repository.
-	  </div>
-	</div>
-</div>
+      <div id="contactInfo" class="container mb-4">
+        <h3 class="section-title">Contact</h3>
+        <div class="card">
+          <ul id="repoFooterLinks" class="list-group list-group-flush"></ul>
+        </div>
+      </div>
+    </div>
 
-<script type="text/javascript">
-   function setAnchorTargets() {
-     // if on Cydia, set link targets to _blank
-     if (navigator.userAgent.search(/Cydia/) != -1) {
-       $("a").each(function() {
-         $(this).attr("target","_blank");
-       });
-     }
-   }
-
-    var repoContents =  {
-        "#repoFooterLinks" :
-            {"type":"custom"
-                ,"source":"repo>footerlinks>link"
-                ,"render":function(element,source) {
-                    $.each(source, function(index,data) {
-                        var a = $("<a class='link-item list-group-item'>");
-                        a.attr("href",$(data).find('url').text());
-                        if ($(data).find('iconclass')) {
-                            var i =  $("<span>")
-                            i.attr("class",$(data).find('iconclass').text());
-                            console.log(i);
-                            $(a).append(i);
-                        }
-                        $(a).append($(data).find('name').text());
-                        $(element).append(a);
-                    }); //each
-                } //render
-            }
-    }
-    $( document ).ready(function() {
-        $.ajax({type: "GET", dataType: "xml",url : ("../repo.xml"),cache: false,
-            success : function(xml){
-				      data_loader_engine(repoContents,xml);
-              setAnchorTargets();
-			      },
-            error: function() {
-              $("#contactInfo").hide();
-              setAnchorTargets();
-            }
-        }); //ajax
-
-
-    }); // ready
-
-</script>
-
-<div id="contactInfo">
-	<div class="container">
-		<h5>CONTACT</h5>
-		<ul class="list-group" id="repoFooterLinks">
-		</ul>
-	</div>
-</div>
-
-
-</body>
+    <div id="packageError" style="display: none">
+      <div class="container">
+        <div class="alert alert-danger">
+          <i class="fa-solid fa-circle-exclamation me-2"></i>
+          <strong>Oh snap!</strong> The package you are trying to view is not
+          hosted on this repository.
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
