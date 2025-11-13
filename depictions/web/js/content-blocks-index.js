@@ -10,7 +10,7 @@ function getContentBlocks() {
       type: "custom",
       source: "package>name",
       render: (element, source) => {
-        if (navigator.userAgent.search(/Cydia/) === -1) {
+        if (navigator.userAgent.search(/Cydia/) === -1 && navigator.userAgent.search(/Zebra/) === -1) {
           $(element).show();
         }
       },

@@ -46,8 +46,8 @@
           }
         );
 
-        // Set target="_blank" for links if on Cydia
-        if (navigator.userAgent.includes("Cydia")) {
+        // Set target="_blank" for links if on Cydia or Zebra
+        if (navigator.userAgent.includes("Cydia") || navigator.userAgent.includes("Zebra")) {
           $("a").attr("target", "_blank");
         }
 
